@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Seu Nome] | Portfólio em Início de Carreira</title>
+    <title>Leonan Otavio | Portfólio de Carreira</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome para Ícones -->
@@ -306,7 +306,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <!-- NOME / LOGO - SUBSTITUA ABAIXO SE DESEJAR -->
-            <a class="navbar-brand" href="#">&lt;[Seu Nome]/&gt;</a>
+            <a class="navbar-brand" href="#">&lt;Leonan Otavio /&gt;</a>
             
             <div class="d-flex align-items-center order-lg-last">
                 <button class="theme-toggle me-2" id="themeBtn" aria-label="Alterar Tema">
@@ -346,18 +346,18 @@
                 <div class="col-lg-7">
                     <span class="accent-pill">
                         <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                        Jovem aprendiz / Iniciante de 18 anos em busca do 1º emprego
+                        Jovem Progamador
                     </span>
                     <!-- SUBSTITUA O NOME NO TÍTULO PRINCIPAL -->
                     <h1 class="display-3 fw-extrabold mb-3">
                         Olá, eu sou <br>
-                        <span class="text-gradient font-serif">[Seu Nome]</span>
+                        <span class="text-gradient font-serif"> Leonan </span>
                     </h1>
                     <h2 class="h3 mb-4 text-secondary">
                         Áreas de interesse: <span id="typing-text" class="text-primary border-end border-3 pe-1"></span><span class="cursor-blink">|</span>
                     </h2>
                     <p class="lead text-secondary mb-5 col-lg-10">
-                        Iniciando minha trajetória profissional com forte base técnica em desenvolvimento de sites simples, rotinas de escritório e redação de conteúdo estratégico, tudo aprendido de forma prática no Senac.
+                        Iniciando minha trajetória profissional com forte base técnica em desenvolvimento de sites, tudo aprendido de forma prática no Senac.
                     </p>
                     <div class="hero-buttons d-flex gap-3">
                         <a href="#contato" class="btn btn-gradient px-4 py-3">Entrar em contato</a>
@@ -409,10 +409,10 @@
                     <span class="text-uppercase tracking-wider text-muted small fw-bold">Apresentação</span>
                     <h2 class="h1 mb-4 mt-1 font-serif">Determinação para aprender <br>e <span class="text-gradient">crescer junto com a empresa</span></h2>
                     <p class="text-secondary mb-4">
-                        Tenho 18 anos e estou em busca da minha primeira oportunidade profissional. Me preparei realizando cursos teóricos e práticos no <strong>Senac</strong>, focando em desenvolver competências iniciais em três pilares fundamentais: tecnologia, gestão administrativa e marketing básico.
+                        Tenho 18 anos e estou iniciando minha carreira na programação. Me preparei realizando cursos teóricos e práticos no <strong>Senac</strong>, focando em desenvolver competências iniciais em três pilares fundamentais: tecnologia, gestão administrativa e marketing básico.
                     </p>
                     <p class="text-secondary mb-4">
-                        Minha meta é atuar como assistente ou auxiliar técnico, aplicando minhas habilidades para ajudar no fluxo de trabalho diário de escritórios, equipes de desenvolvimento ou setores de marketing digital. Estou pronto para começar, aprender processos internos e me dedicar ao máximo.
+                        Minha meta é atuar como assistente, programador ou auxiliar técnico, aplicando minhas habilidades para ajudar as empresas no mundo digital. Estou pronto para começar, aprender e me dedicar ao máximo.
                     </p>
                     <div class="row g-3">
                         <div class="col-sm-6">
@@ -450,7 +450,7 @@
         <div class="container">
             <div class="text-center mb-5">
                 <span class="text-uppercase tracking-wider text-muted small fw-bold">O que posso fazer</span>
-                <h2 class="h1 font-serif">Conhecimentos Iniciais de Suporte</h2>
+                <h2 class="h1 font-serif">Conhecimentos de Suporte</h2>
             </div>
             
             <div class="row g-4">
@@ -462,7 +462,7 @@
                         </div>
                         <h3>Desenvolvimento Web</h3>
                         <p class="text-secondary">
-                            Criação de páginas estáticas simples utilizando a estrutura padrão web. Auxílio na manutenção corretiva de códigos e design responsivo com Bootstrap.
+                            Criação de páginas estáticas utilizando a estrutura padrão web.
                         </p>
                         <hr class="my-4 var(--border-color)">
                         <ul class="list-unstyled d-flex flex-wrap gap-2">
@@ -474,15 +474,15 @@
                     </div>
                 </div>
 
-                <!-- Gestão -->
+               /* <!-- Gestão -->
                 <div class="col-lg-4">
                     <div class="glass-card">
                         <div class="triad-badge" style="background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);">
                             <i class="fa-solid fa-briefcase"></i>
                         </div>
-                        <h3>Rotinas Administrativas</h3>
+                        /*<h3>Rotinas Administrativas</h3>*/
                         <p class="text-secondary">
-                            Suporte nas tarefas diárias de escritório, preenchimento de planilhas de controle, organização de arquivos digitais/físicos e atendimento básico ao colaborador.
+                            Programador junior.
                         </p>
                         <hr class="my-4 var(--border-color)">
                         <ul class="list-unstyled d-flex flex-wrap gap-2">
@@ -515,9 +515,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>*/
 
-    <!-- Formação e Cursos (Simplificada e Focada no Senac) -->
+    <!-- Formação e Cursos (Senac) -->
     <section id="formacao" class="py-5 my-5">
         <div class="container">
             <div class="row">
@@ -525,7 +525,7 @@
                     <span class="text-uppercase tracking-wider text-muted small fw-bold">Estudos</span>
                     <h2 class="h1 font-serif mt-1">Minha Formação Profissionalizante</h2>
                     <p class="text-secondary mt-3 pe-lg-4">
-                        Todos os meus cursos de base foram realizados no <strong>Senac</strong>, focando em disciplinas que se complementam no dia a dia corporativo moderno.
+                        Todos os meus cursos de base foram realizados no <strong>Senac</strong>, focando em disciplinas que se complementam no dia a dia.
                     </p>
                     <div class="mt-4">
                         <div class="p-3 glass-card d-flex align-items-center gap-3">
@@ -576,7 +576,7 @@
                             <span class="badge bg-warning bg-opacity-25 text-warning mb-2">Marketing</span>
                             <h4 class="h5">Marketing de Conteúdo</h4>
                             <p class="text-secondary mb-0 small">
-                                Curso focado na importância de bons textos para a internet, planejamento básico de pautas digitais e como engajar públicos por meio de posts estruturados.
+                                Curso focado na importância de bons textos para a internet, como engajar públicos por meio de posts estruturados.
                             </p>
                         </div>
 
@@ -596,10 +596,10 @@
                     Algumas demonstrações práticas do que desenvolvi e estudei nos laboratórios do Senac.
                 </p>
                 <div class="mt-4">
-                    <button class="filter-btn active" onclick="filterProjects('todos')">Todos</button>
+                    /*<button class="filter-btn active" onclick="filterProjects('todos')">Todos</button>*/
                     <button class="filter-btn" onclick="filterProjects('programacao')">TI & Sites</button>
-                    <button class="filter-btn" onclick="filterProjects('gestao')">Administração / RH</button>
-                    <button class="filter-btn" onclick="filterProjects('marketing')">Marketing</button>
+                   /* <button class="filter-btn" onclick="filterProjects('gestao')">Administração / RH</button>
+                    <button class="filter-btn" onclick="filterProjects('marketing')">Marketing</button>*/
                 </div>
             </div>
 
@@ -683,7 +683,7 @@
                                 <div>
                                     <span class="text-muted d-block small">GitHub</span>
                                     <!-- SUBSTITUA O LINK ABAIXO -->
-                                    <a href="#" target="_blank" class="text-decoration-none text-white fw-bold">[Seu GitHub Aqui]</a>
+                                    <a href="#" target="_blank" class="text-decoration-none text-white fw-bold">leonandutra</a>
                                 </div>
                             </div>
                         </div>
@@ -698,12 +698,12 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label text-secondary small fw-semibold">E-mail de Contato</label>
-                                    <input type="email" class="form-control custom-input" required placeholder="seu@email.com">
+                                    <input type="email" class="form-control custom-input" required placeholder="exemplo@email.com">
                                 </div>
-                                <div class="col-12">
+                                /*<div class="col-12">
                                     <label class="form-label text-secondary small fw-semibold">Assunto</label>
                                     <input type="text" class="form-control custom-input" required placeholder="Ex: Vaga de Jovem Aprendiz / Auxiliar">
-                                </div>
+                                </div>*/
                                 <div class="col-12">
                                     <label class="form-label text-secondary small fw-semibold">Mensagem</label>
                                     <textarea class="form-control custom-input" rows="5" required placeholder="Olá! Gostaria de agendar uma entrevista..."></textarea>
@@ -740,7 +740,7 @@
     <footer class="py-5 text-center text-secondary">
         <div class="container">
             <!-- SUBSTITUA O NOME ABAIXO -->
-            <p class="mb-2">© 2026 [Seu Nome]. Todos os direitos reservados.</p>
+            <p class="mb-2">© 2026 Leonan. Todos os direitos reservados.</p>
             <p class="small text-muted mb-0">
                 Portfólio de Jovem Talento | Capacitação pelo Senac.
             </p>
