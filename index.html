@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonan Otavio | Portfólio de Carreira</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-primary: #0b0f19;
+            --bg-secondary: #111827;
+            --bg-card: rgba(17, 24, 39, 0.7);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent-color: #6366f1; /* Indigo */
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --accent-glow: rgba(99, 102, 241, 0.15);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --transition-speed: 0.3s;
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-card: rgba(255, 255, 255, 0.8);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --accent-color: #4f46e5;
+            --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            --accent-glow: rgba(79, 70, 229, 0.1);
+            --border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Navbar Customizada */
+        .navbar {
+            background-color: rgba(var(--bg-secondary), 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 800;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.2s ease;
+            margin: 0 5px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-color) !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 100px;
+            background: radial-gradient(circle at 90% 10%, var(--accent-glow) 0%, transparent 40%);
+        }
+
+        .accent-pill {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            color: var(--accent-color);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-gradient {
+            background: var(--accent-gradient);
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+            color: #fff;
+        }
+
+        .btn-outline-custom {
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--border-color);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Cards Elegantes (Glassmorphism) */
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            height: 100%;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Badge/Especialidades */
+        .triad-badge {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: var(--accent-gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Filtro de Projetos / Skills */
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-gradient);
+            border-color: transparent;
+            color: white;
+        }
+
+        /* Timeline de Conquistas (Senac) */
+        .timeline-container {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 2.5rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -30px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--bg-primary);
+            border: 4px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            background: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        /* Formulários e Inputs */
+        .custom-input {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 14px;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="light"] .custom-input {
+            background: rgba(0, 0, 0, 0.02);
+        }
+
+        .custom-input:focus {
+            background: transparent;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 4px var(--accent-glow);
+            color: var(--text-primary);
+        }
+
+        /* Switch Tema Escuro/Claro */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 8px;
+            transition: color 0.2s;
+        }
+
+        .theme-toggle:hover {
+            color: var(--accent-color);
+        }
+
+        /* Rodapé */
+        footer {
+            border-top: 1px solid var(--border-color);
+            background-color: var(--bg-secondary);
+        }
+
+        /* Efeitos Extras */
+        .cursor-blink {
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Ajustes Responsivos */
+        @media (max-width: 768px) {
+            .hero-section {
+                text-align: center;
+                padding-top: 140px;
+                padding-bottom: 60px;
+            }
+            .accent-pill {
+                justify-content: center;
+            }
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body data-theme="dark">
+
+    <!-- Header / Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- NOME / LOGO - SUBSTITUA ABAIXO SE DESEJAR -->
+            <a class="navbar-brand" href="#">&lt;Leonan Otavio /&gt;</a>
+            
+            <div class="d-flex align-items-center order-lg-last">
+                <button class="theme-toggle me-2" id="themeBtn" aria-label="Alterar Tema">
+                    <i class="fa-solid fa-sun" id="themeIcon"></i>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre Mim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pilares">Áreas de Atuação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formacao">Formação Senac</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero (Início) -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <span class="accent-pill">
+                        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                        Jovem Progamador
+                    </span>
+                    <!-- SUBSTITUA O NOME NO TÍTULO PRINCIPAL -->
+                    <h1 class="display-3 fw-extrabold mb-3">
+                        Olá, eu sou <br>
+                        <span class="text-gradient font-serif"> Leonan </span>
+                    </h1>
+                    <h2 class="h3 mb-4 text-secondary">
+                        Áreas de interesse: <span id="typing-text" class="text-primary border-end border-3 pe-1"></span><span class="cursor-blink">|</span>
+                    </h2>
+                    <p class="lead text-secondary mb-5 col-lg-10">
+                        Iniciando minha trajetória profissional com forte base técnica em desenvolvimento de sites, tudo aprendido de forma prática no Senac.
+                    </p>
+                    <div class="hero-buttons d-flex gap-3">
+                        <a href="#contato" class="btn btn-gradient px-4 py-3">Entrar em contato</a>
+                        <a href="#sobre" class="btn btn-outline-custom px-4 py-3">Ver meu perfil</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <!-- Ilustração SVG Abstrata -->
+                    <svg viewBox="0 0 500 500" class="w-100 img-fluid">
+                        <defs>
+                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle cx="250" cy="250" r="180" fill="none" stroke="url(#grad1)" stroke-width="4" stroke-dasharray="10, 5" />
+                        <rect x="150" y="150" width="200" height="200" rx="40" fill="none" stroke="url(#grad1)" stroke-width="2" transform="rotate(45 250 250)" filter="url(#glow)"/>
+                        <circle cx="250" cy="250" r="10" fill="#a855f7" />
+                        <path d="M 180,250 Q 250,150 320,250" fill="none" stroke="#6366f1" stroke-width="3" />
+                        <path d="M 180,250 Q 250,350 320,250" fill="none" stroke="#6366f1" stroke-width="3" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="sobre" class="py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="p-2 border border-1 border-secondary rounded-5 d-inline-block bg-opacity-10 bg-secondary">
+                        <div class="bg-dark rounded-5 d-flex align-items-center justify-content-center text-white" style="width: 100%; max-width: 450px; height: 450px;">
+                            <div class="text-center p-4">
+                                <i class="fa-regular fa-user fa-5x mb-3 text-muted"></i>
+                                <p class="text-muted small">Substitua esta seção por uma boa foto sua se desejar!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="text-uppercase tracking-wider text-muted small fw-bold">Apresentação</span>
+                    <h2 class="h1 mb-4 mt-1 font-serif">Determinação para aprender <br>e <span class="text-gradient">crescer junto com a empresa</span></h2>
+                    <p class="text-secondary mb-4">
+                        Tenho 18 anos e estou iniciando minha carreira na programação. Me preparei realizando cursos teóricos e práticos no <strong>Senac</strong>, focando em desenvolver competências iniciais em três pilares fundamentais: tecnologia, gestão administrativa e marketing básico.
+                    </p>
+                    <p class="text-secondary mb-4">
+                        Minha meta é atuar como assistente, programador ou auxiliar técnico, aplicando minhas habilidades para ajudar as empresas no mundo digital. Estou pronto para começar, aprender e me dedicar ao máximo.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-graduation-cap text-primary"></i>
+                                <span class="fw-semibold small">Capacitado pelo Senac</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-arrows-spin text-primary"></i>
+                                <span class="fw-semibold small">Fácil Adaptação</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-users text-primary"></i>
+                                <span class="fw-semibold small">Bom Trabalho em Equipe</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-clock text-primary"></i>
+                                <span class="fw-semibold small">Compromisso e Pontualidade</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilares de Atuação -->
+    <section id="pilares" class="py-5 my-5 bg-opacity-25 bg-dark">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-uppercase tracking-wider text-muted small fw-bold">O que posso fazer</span>
+                <h2 class="h1 font-serif">Conhecimentos de Suporte</h2>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Programação -->
+                <div class="col-lg-4">
+                    <div class="glass-card">
+                        <div class="triad-badge">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Desenvolvimento Web</h3>
+                        <p class="text-secondary">
+                            Criação de páginas estáticas utilizando a estrutura padrão web.
+                        </p>
+                        <hr class="my-4 var(--border-color)">
+                        <ul class="list-unstyled d-flex flex-wrap gap-2">
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">HTML5</li>
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">CSS3</li>
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">JavaScript Básico</li>
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">Bootstrap 5</li>
+                        </ul>
+                    </div>
+                </div>
+
+               /* <!-- Gestão -->
+                <div class="col-lg-4">
+                    <div class="glass-card">
+                        <div class="triad-badge" style="background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        /*<h3>Rotinas Administrativas</h3>*/
+                        <p class="text-secondary">
+                            Programador junior.
+                        </p>
+                        <hr class="my-4 var(--border-color)">
+                        <ul class="list-unstyled d-flex flex-wrap gap-2">
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">Arquivos & Cadastros</li>
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">Planilhas</li>
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">Auxílio em DP/RH</li>
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">Atendimento</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Marketing -->
+                <div class="col-lg-4">
+                    <div class="glass-card">
+                        <div class="triad-badge" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3>Produção de Conteúdo</h3>
+                        <p class="text-secondary">
+                            Redação de textos informativos simples, suporte em estratégias básicas de engajamento para redes sociais corporativas e otimização de artigos para blogs.
+                        </p>
+                        <hr class="my-4 var(--border-color)">
+                        <ul class="list-unstyled d-flex flex-wrap gap-2">
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">Copywriting Inicial</li>
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">Redes Sociais</li>
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">Inbound Básico</li>
+                            <li class="badge bg-secondary bg-opacity-25 text-white py-2 px-3">Ideias de Posts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*/
+
+    <!-- Formação e Cursos (Senac) -->
+    <section id="formacao" class="py-5 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <span class="text-uppercase tracking-wider text-muted small fw-bold">Estudos</span>
+                    <h2 class="h1 font-serif mt-1">Minha Formação Profissionalizante</h2>
+                    <p class="text-secondary mt-3 pe-lg-4">
+                        Todos os meus cursos de base foram realizados no <strong>Senac</strong>, focando em disciplinas que se complementam no dia a dia.
+                    </p>
+                    <div class="mt-4">
+                        <div class="p-3 glass-card d-flex align-items-center gap-3">
+                            <i class="fa-solid fa-school text-primary fa-2x"></i>
+                            <div>
+                                <h5 class="mb-0">Formação Senac</h5>
+                                <p class="text-secondary mb-0 small">Teoria unida à prática comercial.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="timeline-container">
+                        
+                        <!-- Item 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="badge bg-primary bg-opacity-25 text-primary mb-2">TI / Web</span>
+                            <h4 class="h5">Técnico em Informática para Internet</h4>
+                            <p class="text-secondary mb-0 small">
+                                Curso técnico voltado para os fundamentos da internet. Aprendizado básico de lógica, HTML5, CSS3, e as primeiras linhas de código JavaScript para estruturação de interfaces funcionais.
+                            </p>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="badge bg-success bg-opacity-25 text-success mb-2">Administração</span>
+                            <h4 class="h5">Assistente Administrativo</h4>
+                            <p class="text-secondary mb-0 small">
+                                Aprendizado de rotinas internas de um escritório, elaboração e conferência de documentos básicos, noções de arquivos e ferramentas básicas de planilhas de dados.
+                            </p>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <span class="badge bg-success bg-opacity-25 text-success mb-2">Administração</span>
+                            <h4 class="h5">Assistente de Recursos Humanos (RH)</h4>
+                            <p class="text-secondary mb-0 small">
+                                Introdução à rotina de controle pessoal, auxílio básico em processos seletivos locais e noções sobre a importância do bem-estar no clima corporativo.
+                            </p>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="timeline-item pb-0">
+                            <div class="timeline-dot"></div>
+                            <span class="badge bg-warning bg-opacity-25 text-warning mb-2">Marketing</span>
+                            <h4 class="h5">Marketing de Conteúdo</h4>
+                            <p class="text-secondary mb-0 small">
+                                Curso focado na importância de bons textos para a internet, como engajar públicos por meio de posts estruturados.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos de Estudo (Filtro Simples) -->
+    <section id="portfolio" class="py-5 my-5 bg-opacity-10 bg-dark">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="text-uppercase tracking-wider text-muted small fw-bold">Estudos Práticos</span>
+                <h2 class="h1 font-serif">Projetos de Aprendizado</h2>
+                <p class="text-secondary col-lg-6 mx-auto">
+                    Algumas demonstrações práticas do que desenvolvi e estudei nos laboratórios do Senac.
+                </p>
+                <div class="mt-4">
+                    /*<button class="filter-btn active" onclick="filterProjects('todos')">Todos</button>*/
+                    <button class="filter-btn" onclick="filterProjects('programacao')">TI & Sites</button>
+                   /* <button class="filter-btn" onclick="filterProjects('gestao')">Administração / RH</button>
+                    <button class="filter-btn" onclick="filterProjects('marketing')">Marketing</button>*/
+                </div>
+            </div>
+
+            <div class="row g-4" id="projects-grid">
+                <!-- Projeto 1 (Programação) -->
+                <div class="col-md-6 col-lg-4 project-card" data-category="programacao">
+                    <div class="glass-card">
+                        <div class="mb-3 text-primary"><i class="fa-solid fa-code fa-2x"></i></div>
+                        <h4>Landing Pages para Comércio Local</h4>
+                        <p class="text-secondary small">Criação de páginas informativas estruturadas em HTML5 e CSS3 adaptadas para celulares, desenvolvidas durante as aulas do técnico do Senac.</p>
+                        <span class="badge bg-secondary bg-opacity-25">HTML / CSS</span>
+                        <span class="badge bg-secondary bg-opacity-25">Senac</span>
+                    </div>
+                </div>
+
+                <!-- Projeto 2 (Marketing) -->
+                <div class="col-md-6 col-lg-4 project-card" data-category="marketing">
+                    <div class="glass-card">
+                        <div class="mb-3 text-warning"><i class="fa-solid fa-pen-nib fa-2x"></i></div>
+                        <h4>Simulação de Posts para Redes Sociais</h4>
+                        <p class="text-secondary small">Cronograma de postagens e redação de copies institucionais focado em atrair leads e clientes de forma orgânica.</p>
+                        <span class="badge bg-secondary bg-opacity-25">Planejamento</span>
+                        <span class="badge bg-secondary bg-opacity-25">Senac</span>
+                    </div>
+                </div>
+
+                <!-- Projeto 3 (Gestão) -->
+                <div class="col-md-6 col-lg-4 project-card" data-category="gestao">
+                    <div class="glass-card">
+                        <div class="mb-3 text-success"><i class="fa-solid fa-file-invoice fa-2x"></i></div>
+                        <h4>Organização de Planilhas de Fluxo</h4>
+                        <p class="text-secondary small">Simulação prática de gerenciamento e preenchimento de dados de controle interno de arquivos e listas de funcionários.</p>
+                        <span class="badge bg-secondary bg-opacity-25">Planilhas</span>
+                        <span class="badge bg-secondary bg-opacity-25">Senac</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-5 my-5">
+        <div class="container">
+            <div class="glass-card p-4 p-md-5">
+                <div class="row">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <span class="text-uppercase tracking-wider text-muted small fw-bold">Contato</span>
+                        <h2 class="h1 font-serif mt-1">Pronto para começar</h2>
+                        <p class="text-secondary my-4">
+                            Se sua empresa precisa de um jovem focado, disposto a aprender seus sistemas internos e contribuir em rotinas diárias com dedicação total, fale comigo!
+                        </p>
+                        
+                        <!-- INFORMAÇÕES PESSOAIS EM BRANCO PARA VOCÊ PREENCHER -->
+                        <div class="d-flex flex-column gap-4 mt-5">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-3">
+                                    <i class="fa-solid fa-envelope fa-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="text-muted d-block small">E-mail</span>
+                                    <!-- SUBSTITUA O HREF E TEXTO COM SEU EMAIL -->
+                                    <a href="mailto:seu.email@exemplo.com" class="text-decoration-none text-white fw-bold">leonan.dutra.santos@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-3">
+                                    <i class="fa-brands fa-linkedin-in fa-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="text-muted d-block small">Leonan Otavio</span>
+                                    <!-- SUBSTITUA O LINK ABAIXO -->
+                                    <a href="#" target="_blank" class="text-decoration-none text-white fw-bold"></a>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-3">
+                                    <i class="fa-brands fa-github fa-lg"></i>
+                                </div>
+                                <div>
+                                    <span class="text-muted d-block small">GitHub</span>
+                                    <!-- SUBSTITUA O LINK ABAIXO -->
+                                    <a href="#" target="_blank" class="text-decoration-none text-white fw-bold">leonandutra</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-7">
+                        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-semibold">Seu Nome</label>
+                                    <input type="text" class="form-control custom-input" required placeholder="Digite seu nome">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-secondary small fw-semibold">E-mail de Contato</label>
+                                    <input type="email" class="form-control custom-input" required placeholder="exemplo@email.com">
+                                </div>
+                                /*<div class="col-12">
+                                    <label class="form-label text-secondary small fw-semibold">Assunto</label>
+                                    <input type="text" class="form-control custom-input" required placeholder="Ex: Vaga de Jovem Aprendiz / Auxiliar">
+                                </div>*/
+                                <div class="col-12">
+                                    <label class="form-label text-secondary small fw-semibold">Mensagem</label>
+                                    <textarea class="form-control custom-input" rows="5" required placeholder="Olá! Gostaria de agendar uma entrevista..."></textarea>
+                                </div>
+                                <div class="col-12 text-end mt-4">
+                                    <button type="submit" class="btn btn-gradient px-5 py-3 w-100 w-md-auto">Enviar Mensagem</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Feedback Personalizado -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content glass-card border border-primary p-4">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="fa-regular fa-circle-check fa-4x text-success mb-3"></i>
+                    <h3 class="h4 font-serif">Mensagem Enviada!</h3>
+                    <p class="text-secondary mb-4">Obrigado pelo contato! Retornarei assim que possível.</p>
+                    <button type="button" class="btn btn-gradient px-4" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-center text-secondary">
+        <div class="container">
+            <!-- SUBSTITUA O NOME ABAIXO -->
+            <p class="mb-2">© 2026 Leonan. Todos os direitos reservados.</p>
+            <p class="small text-muted mb-0">
+                Portfólio de Jovem Talento | Capacitação pelo Senac.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // --- EFEITO DIGITAÇÃO (TYPING EFFECT) ---
+        // Ajustado para termos realistas de início de carreira
+        const words = ["Desenvolvimento Web Inicial", "Suporte Administrativo", "Produção de Conteúdo", "Auxílio em Recursos Humanos"];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 80;
+        const erasingSpeed = 40;
+        const delayBetweenWords = 1500;
+        const textElement = document.getElementById("typing-text");
+
+        function type() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                textElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            let typeDelay = isDeleting ? erasingSpeed : typingSpeed;
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                typeDelay = delayBetweenWords;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+
+            setTimeout(type, typeDelay);
+        }
+
+        // --- FILTRO DE PROJETOS ---
+        function filterProjects(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick').includes(category)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            cards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'todos' || cardCategory === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // --- SUBMIT DO FORMULÁRIO ---
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const feedbackModal = new bootstrap.Modal(document.getElementById('feedbackModal'));
+            feedbackModal.show();
+            document.getElementById('contactForm').reset();
+        }
+
+        // --- SISTEMA DE TEMA ESCURO / CLARO ---
+        const themeBtn = document.getElementById('themeBtn');
+        const themeIcon = document.getElementById('themeIcon');
+        const bodyElement = document.body;
+
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = bodyElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                bodyElement.setAttribute('data-theme', 'light');
+                themeIcon.className = 'fa-solid fa-moon';
+            } else {
+                bodyElement.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fa-solid fa-sun';
+            }
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 500);
+        });
+    </script>
+</body>
+</html>
