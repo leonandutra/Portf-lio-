@@ -474,13 +474,13 @@
                     </div>
                 </div>
 
-               /* <!-- Gestão -->
+                <!-- Gestão -->
                 <div class="col-lg-4">
                     <div class="glass-card">
                         <div class="triad-badge" style="background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);">
                             <i class="fa-solid fa-briefcase"></i>
                         </div>
-                        /*<h3>Rotinas Administrativas</h3>*/
+                        <h3>Rotinas Administrativas</h3>
                         <p class="text-secondary">
                             Programador junior.
                         </p>
@@ -515,7 +515,7 @@
                 </div>
             </div>
         </div>
-    </section>*/
+    </section>
 
     <!-- Formação e Cursos (Senac) -->
     <section id="formacao" class="py-5 my-5">
@@ -596,10 +596,10 @@
                     Algumas demonstrações práticas do que desenvolvi e estudei nos laboratórios do Senac.
                 </p>
                 <div class="mt-4">
-                    /*<button class="filter-btn active" onclick="filterProjects('todos')">Todos</button>*/
+                    <button class="filter-btn active" onclick="filterProjects('todos')">Todos</button>
                     <button class="filter-btn" onclick="filterProjects('programacao')">TI & Sites</button>
-                   /* <button class="filter-btn" onclick="filterProjects('gestao')">Administração / RH</button>
-                    <button class="filter-btn" onclick="filterProjects('marketing')">Marketing</button>*/
+                   /<button class="filter-btn" onclick="filterProjects('gestao')">Administração / RH</button>
+                    <button class="filter-btn" onclick="filterProjects('marketing')">Marketing</button>
                 </div>
             </div>
 
@@ -700,10 +700,10 @@
                                     <label class="form-label text-secondary small fw-semibold">E-mail de Contato</label>
                                     <input type="email" class="form-control custom-input" required placeholder="exemplo@email.com">
                                 </div>
-                                /*<div class="col-12">
+                                <div class="col-12">
                                     <label class="form-label text-secondary small fw-semibold">Assunto</label>
                                     <input type="text" class="form-control custom-input" required placeholder="Ex: Vaga de Jovem Aprendiz / Auxiliar">
-                                </div>*/
+                                </div>
                                 <div class="col-12">
                                     <label class="form-label text-secondary small fw-semibold">Mensagem</label>
                                     <textarea class="form-control custom-input" rows="5" required placeholder="Olá! Gostaria de agendar uma entrevista..."></textarea>
